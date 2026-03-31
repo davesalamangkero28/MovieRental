@@ -10,18 +10,41 @@
 <body>
 
 <div class="container">
-    <h1>Add Customer</h1>
+
+    <h1>👤 Add Customer</h1>
 
     <form action="store.php" method="POST">
-        <input type="text" name="first_name" placeholder="First Name" required>
-        <input type="text" name="last_name" placeholder="Last Name" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="phone" placeholder="Phone" required>
 
-        <button type="submit" class="btn save">Save</button>
+        <div class="input-box">
+            <span class="icon">👤</span>
+            <input type="text" name="first_name" required>
+            <label>First Name</label>
+        </div>
+
+        <div class="input-box">
+            <span class="icon">👤</span>
+            <input type="text" name="last_name" required>
+            <label>Last Name</label>
+        </div>
+
+        <div class="input-box">
+            <span class="icon">📧</span>
+            <input type="email" name="email" required>
+            <label>Email</label>
+        </div>
+
+        <div class="input-box">
+            <span class="icon">📱</span>
+            <input type="text" name="phone" required>
+            <label>Phone</label>
+        </div>
+
+        <button type="submit" class="btn">💾 Save Customer</button>
+
     </form>
 
     <a href="index.php" class="back">← Back</a>
+
 </div>
 
 </body>

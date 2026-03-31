@@ -5,26 +5,35 @@
 <head>
     <title>Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
 <div class="container">
-    <h1>Movie Rental Dashboard</h1>
+
+    <header class="header">
+        <h1>🎬 Movie Rental Dashboard</h1>
+    </header>
 
     <div class="cards">
 
         <div class="card">
+            <div class="icon">👥</div>
             <h2>Customers</h2>
-            <a href="customers/index.php" class="btn">Open</a>
+            <p>Manage user records</p>
+            <a href="customers/index.php" class="btn">Open →</a>
         </div>
 
         <div class="card">
+            <div class="icon">🎞️</div>
             <h2>Movies</h2>
-            <a href="movies/index.php" class="btn">Open</a>
+            <p>Manage movie inventory</p>
+            <a href="movies/index.php" class="btn">Open →</a>
         </div>
 
     </div>
+
 </div>
 
 </body>
