@@ -1,0 +1,52 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    width: 400px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.save {
+    background-color: green;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: gray;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.save:hover {
+    background-color: darkgreen;
+}
+
+.back:hover {
+    background-color: black;
+}
