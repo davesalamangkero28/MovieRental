@@ -1,10 +1,15 @@
+<?php
+    include ('../config/connect.php');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Movie - MovieRental</title>
-    <link rel="stylesheet" href="css/create.css">
+    <title>Add Movie</title>
+    <link rel="stylesheet" href="create.css">
 </head>
 <body class="bg-light">
     <div class="container mt-5">
@@ -22,11 +27,11 @@
                         <input type="text" class="form-control" id="genre" name="genre" placeholder="Enter genre" required>
                     </div>
                     <div class="mb-3">
-                        <label for="release_year" class="form-label">Release Year</label>
+                        <label for="release_year" class="form-label">ReleaseYear</label>
                         <input type="number" class="form-control" id="release_year" name="release_year" placeholder="e.g. 2023" min="1900" max="2025" required>
                     </div>
                     <div class="mb-3">
-                        <label for="rental_rate" class="form-label">Rental Rate  (₱)</label>
+                        <label for="rental_rate" class="form-label">Rental Rate (₱)</label>
                         <input type="number" step="0.01" class="form-control" id="rental_rate" name="rental_rate" placeholder="e.g. 4.99" min="0" required>
                     </div>
                     <button type="submit" class="btn btn-primary w-100">Save Movie</button>

@@ -29,7 +29,7 @@ body {
     text-decoration: none;
     border-radius: 8px;
     font-size: 14px;
-    transition: 0.2s;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .btn:hover {
@@ -42,10 +42,6 @@ body {
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     overflow: hidden;
-}
-
-
-.table-container {
     max-height: 420px;
     overflow-y: auto;
 }
@@ -71,7 +67,7 @@ thead th {
 
 
 tbody tr {
-    transition: 0.2s;
+    transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
 
