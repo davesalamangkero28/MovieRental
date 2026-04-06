@@ -1,6 +1,7 @@
 <?php
 include('../config/connect.php');
 
+
 $first = $_POST['first_name'];
 $last = $_POST['last_name'];
 $email = $_POST['email'];

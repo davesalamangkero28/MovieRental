@@ -1,10 +1,18 @@
+<<<<<<< Updated upstream
 <?php
     include ('../config/connect.php');
+=======
+<?php 
+  include ('../config/connect.php');
+>>>>>>> Stashed changes
 
 ?>
 
 
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 <!DOCTYPE html>
 <html lang="en">
 <head>
