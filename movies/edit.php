@@ -22,14 +22,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Edit Movies</title>
     </head>
-    <link rel="stylesheet" href="css/edit.css">
+        <link rel="stylesheet" href="css/edit.css">
         <body>
+              <a href="index.php" class="back-btn">← Back to dashboard</a>
+
             <form action="" method="POST">
                 <input type="hidden" name="movie_id" value="<?php echo $data['movie_id']; ?>">
                 <label for="title">Title:</label>
                 <input type="text" name="title" value="<?php echo $data['title']; ?>" required>
                 <br>
-                <label for="genre">Email:</label>
+                <label for="genre">Genre:</label>
                 <input type="text" name="genre" value="<?php echo $data['genre']; ?>" required>
                 <br>
                 <label for="release_year">Release Year:</label>

@@ -103,13 +103,10 @@
         <tr>
             <td><?php echo $row['id']; ?></td>
             <td><?php echo $row['first_name'] . " " . $row['last_name']; ?></td>
-<<<<<<< Updated upstream
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['phone']; ?></td>
-=======
             <td><?php echo $row['email']; $row['email'];?></td>
             <td><?php echo $row['phone']; $row['phone'];?></td>
->>>>>>> Stashed changes
             <td>
                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="edit">Edit</a>
                 <a href="delete.php?id=<?php echo $row['id']; ?>" class="delete"

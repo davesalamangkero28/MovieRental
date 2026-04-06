@@ -1,61 +1,96 @@
-body {
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
-    background: #f4f6f9;
+}
+
+/* Page background */
+body {
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dfe7f3);
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    margin-top: 50px;
 }
 
-.container {
-    background: #fff;
-    padding: 25px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    width: 350px;
+/* Form wrapper */
+.form-wrapper {
+    width: 400px;
 }
 
-h1 {
+/* Title */
+h2 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
+/* Back button */
+.back-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+}
+
+.back-btn:hover {
+    color: #000;
+}
+
+/* Form box */
+.form-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Labels */
 label {
-    font-weight: bold;
     display: block;
-    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
 }
 
-input[type="text"],
-input[type="email"] {
+/* Inputs */
+input {
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
+    padding: 8px 10px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    outline: none;
-    transition: 0.3s;
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus {
+input:focus {
     border-color: #007bff;
+    outline: none;
 }
 
-input[type="submit"] {
+/* Button */
+.submit-btn {
     width: 100%;
-    margin-top: 15px;
     padding: 10px;
     background: #007bff;
+    color: #fff;
     border: none;
-    color: white;
-    font-weight: bold;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 15px;
 }
 
-input[type="submit"]:hover {
+.submit-btn:hover {
     background: #0056b3;
 }
