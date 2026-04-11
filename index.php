@@ -33,6 +33,29 @@
         </div>
 
     </div>
+        <hr>
+
+                <h2>Now Showing 🎬</h2>
+
+                <div class="movie-list">
+
+                <?php
+                $result = mysqli_query($conn, "SELECT * FROM movies");
+
+                while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+
+                    <div class="movie-card">
+                        <img src="images/movies/<?php echo $row['image']; ?>" alt="poster">
+
+                        <h3><?php echo $row['title']; ?></h3>
+                        <p><?php echo $row['genre']; ?></p>
+                        <p>Year: <?php echo $row['release_year']; ?></p>
+                    </div>
+
+                <?php } ?>
+
+</div>
 
 </div>
 
