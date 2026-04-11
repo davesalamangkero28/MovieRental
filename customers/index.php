@@ -1,81 +1,12 @@
 <?php 
-      require_once ('../config/connect.php');
-      
-    
-
+require_once ('../config/connect.php');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
     <title>Customers</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f9;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .add-btn {
-            display: inline-block;
-            margin-bottom: 15px;
-            padding: 8px 15px;
-            background: #28a745;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .add-btn:hover {
-            background: #218838;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-            text-align: left;
-        }
-
-        th {
-            background: #f1f1f1;
-        }
-
-        .edit {
-            color: #007bff;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        .delete {
-            color: red;
-            text-decoration: none;
-        }
-
-        .edit:hover,
-        .delete:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/MovieRental/css/index.css">
 </head>
 
 <body>
@@ -96,7 +27,6 @@
 
         <?php
         $result = mysqli_query($conn, "SELECT * FROM customers");
-        
 
         while ($row = mysqli_fetch_assoc($result)) {
         ?>
@@ -105,8 +35,6 @@
             <td><?php echo $row['first_name'] . " " . $row['last_name']; ?></td>
             <td><?php echo $row['email']; ?></td>
             <td><?php echo $row['phone']; ?></td>
-            <td><?php echo $row['email']; $row['email'];?></td>
-            <td><?php echo $row['phone']; $row['phone'];?></td>
             <td>
                 <a href="edit.php?id=<?php echo $row['id']; ?>" class="edit">Edit</a>
                 <a href="delete.php?id=<?php echo $row['id']; ?>" class="delete"
@@ -115,9 +43,9 @@
         </tr>
         <?php } ?>
     </table>
-
 </div>
+
+<a href="../index.php" class="back-btn">Back to Dashboard</a>
 
 </body>
 </html>
-
