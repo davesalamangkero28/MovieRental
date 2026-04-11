@@ -26,6 +26,7 @@ input {
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 input:focus {
@@ -41,6 +42,7 @@ input:focus {
     border-radius: 6px;
     cursor: pointer;
     font-size: 15px;
+    box-sizing: border-box;
 }
 
 .save {
