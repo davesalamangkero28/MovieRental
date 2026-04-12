@@ -3,59 +3,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Movie Dashboard</title>
+    <title>Movie Dashboard</title>
     <link rel="stylesheet" href="css/dashboard.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-<div class="container">
-
-    <header class="header">
-        <h1>🎬 Movie Rental Dashboard</h1>
-    </header>
-
-    <div class="cards">
-
-        <div class="card">
-            <div class="icon">👥</div>
-            <h2>Customers</h2>
-            <p>Manage user records</p>
-            <a href="customers/index.php" class="btn">Open →</a>
-        </div>
-
-        <div class="card">
-            <div class="icon">🎞️</div>
-            <h2>Movies</h2>
-            <p>Manage movie inventory</p>
-            <a href="movies/index.php" class="btn">Open →</a>
-        </div>
+<header class="header">
+    <div class="logo">🎬 MovieDashboard</div>
 
     </div>
-        <hr>
 
-                <h2>Now Showing 🎬</h2>
+    <div class="top-menu">
+        <a href="index.php">Home</a>
+        <a href="#">Payments</a>
+        <a href="movies/index.php">Movies</a>
+        <a href="customers/index.php">Customers</a>
+        <a href="rentals/index.php">Rentals</a>
+    </div>
+</header>
 
-                <div class="movie-list">
+<div class="container">
 
-                <?php
-                $result = mysqli_query($conn, "SELECT * FROM movies");
+    <h1 class="section-title">Movies For Rent</h1>
 
-                while ($row = mysqli_fetch_assoc($result)) {
-                ?>
+    <div class="movie-list">
 
-                    <div class="movie-card">
-                        <img src="images/movies/<?php echo $row['image']; ?>" alt="poster">
+    <?php
+    $result = mysqli_query($conn, "SELECT * FROM movies");
 
-                        <h3><?php echo $row['title']; ?></h3>
-                        <p><?php echo $row['genre']; ?></p>
-                        <p>Year: <?php echo $row['release_year']; ?></p>
-                    </div>
+    while ($row = mysqli_fetch_assoc($result)) {
+    ?>
 
-                <?php } ?>
+        <div class="movie-card">
+            <img src="images/movies/<?php echo $row['image']; ?>">
 
-</div>
+            <div class="overlay">
+                <h3><?php echo $row['title']; ?></h3>
+                <p><?php echo $row['genre']; ?></p>
+                <span><?php echo $row['release_year']; ?></span>
+            </div>
+        </div>
+
+    <?php } ?>
+
+    </div>
 
 </div>
 

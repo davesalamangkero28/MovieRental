@@ -18,7 +18,7 @@ require_once ('../config/connect.php');
 
     <table>
         <tr>
-            <th>ID</th>
+            <th>No.</th>
             <th>Name</th>
             <th>Email</th>
             <th>Cellphone number</th>
