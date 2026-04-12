@@ -1,46 +1,39 @@
 <?php
-        include('../config/connect.php');
-            $id = $_GET['id'] ?? 0;
-
-    $result = mysqli_query($conn, "SELECT * FROM movies WHERE movie_id= $id");
-
-    if (!$result) {
-        die("Query failed: " . mysqli_error($conn));
-    }
-
+    include('../config/connect.php');
+            
+    $id = $_GET['id'];
+    $result = mysqli_query($conn, "SELECT * FROM movies WHERE movie_id=$id");
     $data = mysqli_fetch_assoc($result);
 
-    if (!$data) {
-        die("No record found!");
-    }
+   
+    
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Edit Movies</title>
-    </head>
-        <link rel="stylesheet" href="css/edit.css">
-        <body>
-              <a href="index.php" class="back-btn">← Back to dashboard</a>
+<html>
+<head>
+    <title>Edit Movie</title>
+    <link rel="stylesheet" href="/MovieRental/css/edit.css">
+</head>
 
-            <form action="" method="POST">
-                <input type="hidden" name="movie_id" value="<?php echo $data['movie_id']; ?>">
-                <label for="title">Title:</label>
-                <input type="text" name="title" value="<?php echo $data['title']; ?>" required>
-                <br>
-                <label for="genre">Genre:</label>
-                <input type="text" name="genre" value="<?php echo $data['genre']; ?>" required>
-                <br>
-                <label for="release_year">Release Year:</label>
-                <input type="text" name="release_year" value="<?php echo $data['release_year']; ?>" required>
-                <br>
-                <label for="rental_rate">Rental Rate:</label>
-                <input type="text" name="rental_rate" value="<?php echo $data['rental_rate']; ?>" required>
-                <br>
-                <input type="submit" name="update" value="Update">
-            </form>
-        </body>
+<body>
+
+<div class="container">
+    <h1>Edit Movie</h1>
+
+    <form action="update.php" method="POST">
+        <input type="hidden" name="movie_id" value="<?= $data['movie_id'] ?>">
+
+        <input type="text" name="title" value="<?= $data['title'] ?>" required>
+        <input type="text" name="genre" value="<?= $data['genre'] ?>" required>
+        <input type="text" name="release_year" value="<?= $data['release_year'] ?>" required>
+        <input type="text" name="rental_rate" value="<?= $data['rental_rate'] ?>" required>
+
+        <button type="submit" class="btn save">Update</button>
+    </form>
+
+    <a href="index.php" class="back-btn">Back</a>
+</div>
+
+</body>
 </html>
