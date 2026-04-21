@@ -5,10 +5,11 @@ body {
   color: #333;
 }
 
+
 .layout {
   display: flex;
-
 }
+
 
 .sidebar {
   width: 230px;
@@ -17,8 +18,6 @@ body {
   display: flex;
   flex-direction: column;
   border-right: 1px solid #ddd;
-  box-sizing: border-box;
-  align-items: flex-start;
 }
 
 .logo {
@@ -32,7 +31,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  margin-top: 20px;
 }
 
 .sidebar-menu a {
@@ -41,8 +39,7 @@ body {
   padding: 12px 14px;
   border-radius: 10px;
   font-size: 13px;
-  transition: all 0.2s ease;
-  display: block;
+  transition: 0.2s;
 }
 
 .sidebar-menu a:hover {
@@ -53,51 +50,50 @@ body {
 
 .sidebar-menu a.active {
   background: #4a90e2;
-  color: #ffffff;
-  font-weight: 600;
+  color: #fff;
 }
 
+
 .container {
-    flex: 1;
-    max-width: 900px;
-    margin: 30px auto;
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  flex: 1;
+  margin: 30px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
 
 .section-title {
-  margin-top: 0;
   margin-bottom: 20px;
 }
 
+
 .movie-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 20px;
 }
+
 
 .movie-card {
   position: relative;
   border-radius: 12px;
   overflow: hidden;
-  background: #000;
 }
 
 .movie-card img {
   width: 100%;
-  height: 300px;
+  height: 270px;
   object-fit: cover;
-  display: block;
 }
+
 
 .overlay {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 10px;
-  background: linear-gradient(to top, rgba(0,0,0,0.), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
   color: #fff;
 }
 
@@ -114,3 +110,20 @@ body {
 .overlay span {
   font-size: 12px;
 }
+.rent-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  background: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.rent-btn:hover {
+  background: #357abd;
+}
+
+
