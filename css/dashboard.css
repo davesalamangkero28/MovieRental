@@ -1,125 +1,116 @@
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #0f172a;
-    color: #e2e8f0;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #eef2f7, #dfe7f3);
+  color: #333;
 }
-
 
 .layout {
-    display: flex;
-    min-height: 100vh;
-}
+  display: flex;
 
+}
 
 .sidebar {
-    width: 230px;
-    background: #020617;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    border-right: 1px solid rgba(255,255,255,0.05);
+  width: 230px;
+  background: #ffffff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ddd;
+  box-sizing: border-box;
+  align-items: flex-start;
 }
-
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: #22c55e;
-    margin-bottom: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a90e2;
+  margin-bottom: 30px;
 }
 
-
 .sidebar-menu {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 20px;
 }
 
 .sidebar-menu a {
-    text-decoration: none;
-    color: #94a3b8;
-    padding: 12px 14px;
-    border-radius: 10px;
-    font-size: 14px;
-    transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  display: block;
 }
-
 
 .sidebar-menu a:hover {
-    background: rgba(34,197,94,0.15);
-    color: #22c55e;
-    transform: translateX(6px);
+  background: #f1f5f9;
+  color: #4a90e2;
+  transform: translateX(5px);
 }
-
 
 .sidebar-menu a.active {
-    background: #22c55e;
-    color: #020617;
-    font-weight: 600;
+  background: #4a90e2;
+  color: #ffffff;
+  font-weight: 600;
 }
 
-
-.main-content {
+.container {
     flex: 1;
-    padding: 30px 40px;
+    max-width: 900px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
-
 
 .section-title {
-    font-size: 22px;
-    margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-
 
 .movie-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
-
 
 .movie-card {
-    position: relative;
-    border-radius: 12px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.movie-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
 }
 
 .movie-card img {
-    width: 100%;
-    height: 270px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
 }
 
-
 .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 12px;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0,0,0,0.), transparent);
+  color: #fff;
 }
 
 .overlay h3 {
-    margin: 0;
-    font-size: 14px;
+  margin: 0;
+  font-size: 16px;
 }
 
 .overlay p {
-    margin: 3px 0;
-    font-size: 12px;
-    color: #cbd5f5;
+  margin: 2px 0;
+  font-size: 13px;
 }
 
 .overlay span {
-    font-size: 11px;
-    color: #94a3b8;
+  font-size: 12px;
 }

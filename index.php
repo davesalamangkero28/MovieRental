@@ -9,13 +9,13 @@
 </head>
 
 <body>
-
-<header class="header">
+<header>
+<div class="sidebar">
     <div class="logo">🎬 MovieDashboard</div>
 
-    </div>
+</div>
 
-    <div class="top-menu">
+    <div class="sidebar-menu">
         <a href="index.php">Home</a>
         <a href="#">Payments</a>
         <a href="movies/index.php">Movies</a>
@@ -37,7 +37,7 @@
     ?>
 
         <div class="movie-card">
-            <img src="images/movies/<?php echo $row['image']; ?>">
+            <img src="images/movies/<?php echo $row['image']; ?>" alt="movie poster">
 
             <div class="overlay">
                 <h3><?php echo $row['title']; ?></h3>
